@@ -1,0 +1,286 @@
+{
+  "schema_version": 1,
+  "title": "Demo Project",
+  "scene": {
+    "width": 1920,
+    "height": 1080,
+    "fps": {
+      "num": 30,
+      "den": 1
+    },
+    "duration": 3528000000,
+    "layers": [
+      {
+        "id": "40564dde-6807-4ec4-b21f-277501979eda",
+        "name": "Clip",
+        "content": {
+          "Media": {
+            "source": "clip-1",
+            "in_point": 0,
+            "out_point": 3528000000
+          }
+        },
+        "transform": {
+          "position": {
+            "default": [
+              0.0,
+              0.0
+            ],
+            "keys": []
+          },
+          "scale": {
+            "default": [
+              1.0,
+              1.0
+            ],
+            "keys": []
+          },
+          "rotation": {
+            "default": 0.0,
+            "keys": []
+          },
+          "anchor": {
+            "default": [
+              0.0,
+              0.0
+            ],
+            "keys": []
+          },
+          "opacity": {
+            "default": 1.0,
+            "keys": []
+          }
+        },
+        "effects": {
+          "nodes": []
+        },
+        "start": 0,
+        "duration": 3528000000,
+        "children": []
+      },
+      {
+        "id": "5e70ad78-15bb-4937-a841-70a0e069e473",
+        "name": "Background",
+        "content": {
+          "Shape": {
+            "shape": {
+              "Rect": {
+                "size": {
+                  "default": [
+                    1920.0,
+                    1080.0
+                  ],
+                  "keys": []
+                },
+                "corner_radius": {
+                  "default": 0.0,
+                  "keys": []
+                }
+              }
+            },
+            "fill": {
+              "Solid": {
+                "default": [
+                  0.05,
+                  0.05,
+                  0.08,
+                  1.0
+                ],
+                "keys": []
+              }
+            },
+            "stroke": null
+          }
+        },
+        "transform": {
+          "position": {
+            "default": [
+              0.0,
+              0.0
+            ],
+            "keys": []
+          },
+          "scale": {
+            "default": [
+              1.0,
+              1.0
+            ],
+            "keys": []
+          },
+          "rotation": {
+            "default": 0.0,
+            "keys": []
+          },
+          "anchor": {
+            "default": [
+              0.0,
+              0.0
+            ],
+            "keys": []
+          },
+          "opacity": {
+            "default": 1.0,
+            "keys": []
+          }
+        },
+        "effects": {
+          "nodes": []
+        },
+        "start": 0,
+        "duration": 3528000000,
+        "children": []
+      },
+      {
+        "id": "e1145434-2f0d-42d3-afb0-d1c6dfda0788",
+        "name": "Title",
+        "content": {
+          "Text": {
+            "runs": [
+              {
+                "text": "Cutlass",
+                "style": {
+                  "font": {
+                    "family": "Inter",
+                    "weight": 700,
+                    "italic": false
+                  },
+                  "align": "Center",
+                  "fill": {
+                    "default": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ],
+                    "keys": []
+                  },
+                  "size": {
+                    "default": 120.0,
+                    "keys": []
+                  },
+                  "tracking": {
+                    "default": 0.0,
+                    "keys": []
+                  },
+                  "line_height": 1.2
+                }
+              }
+            ],
+            "width": 1200.0,
+            "height": null
+          }
+        },
+        "transform": {
+          "position": {
+            "default": [
+              0.0,
+              40.0
+            ],
+            "keys": [
+              {
+                "time": 0,
+                "value": [
+                  0.0,
+                  40.0
+                ],
+                "interp": "Bezier",
+                "out_tangent": {
+                  "x": 0.2,
+                  "y": 0.0
+                },
+                "in_tangent": {
+                  "x": 1.0,
+                  "y": 1.0
+                }
+              },
+              {
+                "time": 564480000,
+                "value": [
+                  0.0,
+                  0.0
+                ],
+                "interp": "Linear",
+                "out_tangent": {
+                  "x": 0.0,
+                  "y": 0.0
+                },
+                "in_tangent": {
+                  "x": 0.0,
+                  "y": 1.0
+                }
+              }
+            ]
+          },
+          "scale": {
+            "default": [
+              1.0,
+              1.0
+            ],
+            "keys": []
+          },
+          "rotation": {
+            "default": 0.0,
+            "keys": []
+          },
+          "anchor": {
+            "default": [
+              0.0,
+              0.0
+            ],
+            "keys": []
+          },
+          "opacity": {
+            "default": 0.0,
+            "keys": [
+              {
+                "time": 0,
+                "value": 0.0,
+                "interp": "Bezier",
+                "out_tangent": {
+                  "x": 0.0,
+                  "y": 0.0
+                },
+                "in_tangent": {
+                  "x": 1.0,
+                  "y": 1.0
+                }
+              },
+              {
+                "time": 564480000,
+                "value": 1.0,
+                "interp": "Linear",
+                "out_tangent": {
+                  "x": 0.0,
+                  "y": 0.0
+                },
+                "in_tangent": {
+                  "x": 0.58,
+                  "y": 1.0
+                }
+              }
+            ]
+          }
+        },
+        "effects": {
+          "nodes": []
+        },
+        "start": 0,
+        "duration": 3528000000,
+        "children": []
+      }
+    ]
+  },
+  "fonts": [
+    [
+      "Inter",
+      "fonts/Inter-Bold.ttf"
+    ]
+  ],
+  "sources": [
+    [
+      "clip-1",
+      "media/clip1.mp4"
+    ]
+  ],
+  "template": null
+}

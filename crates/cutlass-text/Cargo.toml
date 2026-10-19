@@ -1,0 +1,19 @@
+[package]
+name = "cutlass-text"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+description = "Self-owned text model (shaping/layout/raster) for pixel-identical text across platforms."
+
+[dependencies]
+glam = { workspace = true }
+serde = { workspace = true }
+cutlass-anim = { workspace = true }
+
+# Planned (added when the shaping/raster pipeline lands), see ARCHITECTURE.md:
+#   rustybuzz  — HarfBuzz-equivalent shaping
+#   cosmic-text — line breaking / layout
+#   swash      — glyph rasterization
+#   fontdb     — font database / fallback

@@ -1,0 +1,19 @@
+[package]
+name = "cutlass-render"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+description = "GPU render graph + compositor (wgpu). One pipeline drives preview and export."
+
+[dependencies]
+glam = { workspace = true }
+log = { workspace = true }
+cutlass-core = { workspace = true }
+cutlass-anim = { workspace = true }
+
+# Planned GPU backend (added with the first render spike), see ARCHITECTURE.md:
+#   wgpu              — Metal / Vulkan / D3D12 / GLES abstraction
+#   raw-window-handle — surface handoff from native views
+#   naga              — WGSL compilation

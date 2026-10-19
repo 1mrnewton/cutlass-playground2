@@ -1,0 +1,24 @@
+[package]
+name = "cutlass-cli"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+description = "Headless dev harness: build/inspect documents, drive the engine without a UI."
+
+[[bin]]
+name = "cutlass"
+path = "src/main.rs"
+
+[dependencies]
+glam = { workspace = true }
+cutlass-core = { workspace = true }
+cutlass-render = { workspace = true }
+cutlass-anim = { workspace = true }
+cutlass-text = { workspace = true }
+cutlass-shapes = { workspace = true }
+cutlass-effects = { workspace = true }
+cutlass-ml = { workspace = true }
+cutlass-agent = { workspace = true }
+cutlass-lottie = { workspace = true }

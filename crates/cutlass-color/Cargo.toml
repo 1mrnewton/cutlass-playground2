@@ -1,0 +1,12 @@
+[package]
+name = "cutlass-color"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+description = "Color science for the editor: linear working space, transfer functions (sRGB/PQ/HLG), primaries/gamut matrices, and the encode/decode boundary."
+
+[dependencies]
+glam = { workspace = true }
+serde = { workspace = true }

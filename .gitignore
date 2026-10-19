@@ -1,0 +1,17 @@
+/target
+**/*.rs.bk
+Cargo.lock.orig
+
+# Native app build artifacts
+apps/apple/**/build/
+apps/apple/**/DerivedData/
+apps/android/**/.gradle/
+apps/android/**/build/
+apps/windows/**/bin/
+apps/windows/**/obj/
+apps/linux/**/build/
+
+# OS / editor noise
+.DS_Store
+*.swp
+test-assets/

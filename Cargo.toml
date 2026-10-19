@@ -1,0 +1,62 @@
+[workspace]
+resolver = "3"
+members = [
+    "crates/cutlass-time",
+    "crates/cutlass-color",
+    "crates/cutlass-anim",
+    "crates/cutlass-text",
+    "crates/cutlass-shapes",
+    "crates/cutlass-effects",
+    "crates/cutlass-lottie",
+    "crates/cutlass-media",
+    "crates/cutlass-ml",
+    "crates/cutlass-core",
+    "crates/cutlass-render",
+    "crates/cutlass-agent",
+    "crates/cutlass-ffi",
+    "crates/cutlass-cli",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/cutlass/cutlass"
+rust-version = "1.85"
+
+# Shared, version-pinned dependencies. Members opt in via `{ workspace = true }`.
+#
+# NOTE: Only the lightweight foundations are wired up today so the workspace
+# builds fast and green. The heavier engine dependencies that the architecture
+# calls for (wgpu, naga, cosmic-text, rustybuzz, swash, vello, symphonia,
+# uniffi, ...) are intentionally NOT listed here yet; they are documented in
+# ARCHITECTURE.md and will be added to the relevant crate as each subsystem is
+# implemented, so we never pull a multi-minute build before we use it.
+[workspace.dependencies]
+glam = { version = "0.33.1", features = ["serde"] }
+serde = { version = "1.0.228", features = ["derive"] }
+serde_json = "1.0.150"
+thiserror = "2.0.18"
+log = "0.4.33"
+uuid = { version = "1.23.4", features = ["v4", "serde"] }
+slotmap = { version = "1.1.1", features = ["serde"] }
+arc-swap = "1.9.1"
+
+# Internal crates
+cutlass-time = { path = "crates/cutlass-time" }
+cutlass-color = { path = "crates/cutlass-color" }
+cutlass-anim = { path = "crates/cutlass-anim" }
+cutlass-text = { path = "crates/cutlass-text" }
+cutlass-shapes = { path = "crates/cutlass-shapes" }
+cutlass-effects = { path = "crates/cutlass-effects" }
+cutlass-lottie = { path = "crates/cutlass-lottie" }
+cutlass-media = { path = "crates/cutlass-media" }
+cutlass-ml = { path = "crates/cutlass-ml" }
+cutlass-core = { path = "crates/cutlass-core" }
+cutlass-render = { path = "crates/cutlass-render" }
+cutlass-agent = { path = "crates/cutlass-agent" }
+cutlass-ffi = { path = "crates/cutlass-ffi" }
+
+[profile.release]
+lto = "thin"
+codegen-units = 1

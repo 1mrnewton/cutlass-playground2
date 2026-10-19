@@ -1,0 +1,19 @@
+[package]
+name = "cutlass-lottie"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+description = "Import Lottie / Bodymovin animations into the Cutlass document model."
+
+[dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+log = { workspace = true }
+glam = { workspace = true }
+cutlass-time = { workspace = true }
+cutlass-anim = { workspace = true }
+cutlass-shapes = { workspace = true }
+cutlass-core = { workspace = true }

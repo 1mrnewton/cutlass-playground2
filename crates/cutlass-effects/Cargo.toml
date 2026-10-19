@@ -1,0 +1,16 @@
+[package]
+name = "cutlass-effects"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+description = "Data-driven effect graph: a DAG of WGSL shader passes with animatable uniforms."
+
+[dependencies]
+glam = { workspace = true }
+serde = { workspace = true }
+cutlass-anim = { workspace = true }
+
+# Planned (added with the render backend), see ARCHITECTURE.md:
+#   naga / wgpu — compile WGSL to Metal / Vulkan / D3D12 / GLES

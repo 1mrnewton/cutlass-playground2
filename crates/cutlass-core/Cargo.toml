@@ -1,0 +1,25 @@
+[package]
+name = "cutlass-core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+description = "The document/template model, scene graph, timeline, and command/undo system."
+
+[dependencies]
+glam = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+uuid = { workspace = true }
+slotmap = { workspace = true }
+arc-swap = { workspace = true }
+cutlass-time = { workspace = true }
+cutlass-color = { workspace = true }
+cutlass-anim = { workspace = true }
+cutlass-text = { workspace = true }
+cutlass-shapes = { workspace = true }
+cutlass-effects = { workspace = true }
+# NOTE: cutlass-media intentionally NOT a dependency. Decoded-frame caches are a
+# render-side concern keyed by node id, never stored in the document model.

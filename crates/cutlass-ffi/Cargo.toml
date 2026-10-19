@@ -1,0 +1,22 @@
+[package]
+name = "cutlass-ffi"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+description = "Stable command-in/event-out boundary consumed by the native UIs."
+
+[lib]
+# cdylib/staticlib for the C ABI consumers (Windows/Linux) and the system
+# library Apple/Android link against; rlib so cutlass-cli can use it directly.
+crate-type = ["lib", "cdylib", "staticlib"]
+
+[dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }
+cutlass-core = { workspace = true }
+
+# Planned binding generators (added when wiring native UIs), see ARCHITECTURE.md:
+#   uniffi   — generates idiomatic Swift (Apple) + Kotlin (Android) bindings
+#   cbindgen — generates the C header for Windows (WinUI) + Linux (GTK/Qt)

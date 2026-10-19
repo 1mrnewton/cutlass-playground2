@@ -1,0 +1,17 @@
+[package]
+name = "cutlass-shapes"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+description = "Animatable vector shapes (paths, strokes, fills) for the scene graph."
+
+[dependencies]
+glam = { workspace = true }
+serde = { workspace = true }
+cutlass-anim = { workspace = true }
+
+# Planned GPU path rendering (added when tessellation lands), see ARCHITECTURE.md:
+#   vello / lyon — GPU path tessellation & filling
+#   kurbo        — Bézier path math

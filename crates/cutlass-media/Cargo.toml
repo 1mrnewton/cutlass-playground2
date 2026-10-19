@@ -1,0 +1,19 @@
+[package]
+name = "cutlass-media"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+description = "Decode/encode/demux abstractions with per-platform, license-aware backends."
+
+[dependencies]
+serde = { workspace = true }
+thiserror = { workspace = true }
+
+# Planned per-platform backends (added behind feature flags), see ARCHITECTURE.md:
+#   apple   → VideoToolbox    (App Store safe, hardware)
+#   android → MediaCodec (NDK)
+#   windows → Media Foundation
+#   linux   → FFmpeg (VAAPI)  — kept off Apple/Android targets for licensing
+#   audio   → symphonia       (pure-Rust, license-safe decode)

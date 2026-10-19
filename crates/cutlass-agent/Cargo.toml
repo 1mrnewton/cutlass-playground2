@@ -1,0 +1,20 @@
+[package]
+name = "cutlass-agent"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+description = "AI agent that plans natural-language intents into engine commands the core executes."
+
+[dependencies]
+serde = { workspace = true }
+thiserror = { workspace = true }
+glam = { workspace = true }
+cutlass-core = { workspace = true }
+cutlass-anim = { workspace = true }
+cutlass-text = { workspace = true }
+cutlass-ml = { workspace = true }
+
+# Placeholder crate. The LLM planner (intent -> skill selection) is added later
+# behind a provider trait; today skills are invoked directly. See ARCHITECTURE.md.

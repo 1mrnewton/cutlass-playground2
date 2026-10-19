@@ -1,0 +1,18 @@
+[package]
+name = "cutlass-ml"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+description = "Pluggable AI/CV/DSP model providers (STT, TTS, generation, analysis) behind stable traits."
+
+[dependencies]
+serde = { workspace = true }
+thiserror = { workspace = true }
+cutlass-media = { workspace = true }
+
+# Placeholder crate. Concrete providers are added behind feature flags so an
+# all-FOSS build can run with only local/open models, see ARCHITECTURE.md:
+#   local  → whisper.cpp / vosk (STT), piper (TTS), onnxruntime (CV models)
+#   hosted → optional API providers for generative video/image (opt-in)
